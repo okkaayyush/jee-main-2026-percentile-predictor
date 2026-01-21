@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JEE Percentile Predictor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>JEE Percentile Predictor</h1>
+    <h2>by Aayush Bhoj [IIT Roorkee]</h2>
+
+    <label for="shift">Select Shift</label>
+    <select id="shift">
+      <option value="">-- Select Shift --</option>
+      <option value="21S1">21 Jan Shift 1</option>
+      <option value="21S2">21 Jan Shift 2</option>
+      <option value="22S1">22 Jan Shift 1</option>
+      <option value="22S2">22 Jan Shift 2</option>
+      <option value="23S1">23 Jan Shift 1</option>
+      <option value="23S2">23 Jan Shift 2</option>
+      <option value="24S1">24 Jan Shift 1</option>
+      <option value="24S2">24 Jan Shift 2</option>
+      <option value="28S1">28 Jan Shift 1</option>
+      <option value="28S2">28 Jan Shift 2</option>
+    </select>
+
+    <label for="marks">Enter Marks (0–300)</label>
+    <input type="number" id="marks" min="0" max="300" placeholder="e.g. 178" />
+
+    <button onclick="predict()">Predict Percentile</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
