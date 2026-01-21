@@ -1,98 +1,60 @@
+/* RESET-ish */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #4facfe, #00f2fe);
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container {
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-select, input {
+/* Wrapper */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  max-width: 420px;
 }
 
-button {
-  width: 100%;
-  margin-top: 15px;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  background: #4facfe;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #2e8df5;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-}
-
-#result {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-
+/* Social Bar */
 .social-bar {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap; /* stack nicely on small screens */
 }
 
 .social-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
+  gap: 8px;
+  padding: 10px 14px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   color: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-btn i {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .social-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
+
 .youtube {
   background: linear-gradient(135deg, #ff0000, #cc0000);
 }
@@ -105,9 +67,122 @@ button:hover {
   background: linear-gradient(135deg, #0088cc, #005f99);
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;   
-  align-items: center;
+/* Main Container */
+.container {
+  background: #fff;
+  padding: 22px 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Form */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4facfe;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2e8df5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* Result */
+#result {
+  margin-top: 16px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ------------------ */
+/* MOBILE BREAKPOINT */
+/* ------------------ */
+@media (max-width: 480px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .social-bar {
+    gap: 8px;
+  }
+
+  .social-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 18px 16px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  select,
+  input {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 11px;
+  }
+
+  #result {
+    font-size: 16px;
+  }
+}
