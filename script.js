@@ -55,7 +55,7 @@ const baseCurve = [
 ==================================================== */
 
 const shiftM99 = {
-  "21S1": 236,
+  "21S1": 210,
   "21S2": 211,
   "22S1": 203,
   "22S2": 212,
@@ -142,7 +142,8 @@ function predict() {
   const marks = parseFloat(document.getElementById("marks").value);
   const resultDiv = document.getElementById("result");
 
-  if (!shift || isNaN(marks) || marks < 0 || marks > 300) {
+if (!shift || isNaN(marks) || !Number.isInteger(marks) || marks < 0 || marks > 300 || [289, 293, 294, 297, 298, 299].includes(marks)) 
+ {
     resultDiv.innerHTML = "❌ Enter valid shift and marks.";
     return;
   }
@@ -162,6 +163,6 @@ function predict() {
 
   resultDiv.innerHTML = `
     🎯 Predicted Percentile:<br>
-    <span style="color:#4facfe">${percentile.toFixed(3)}</span>
+    <span style="color:#4facfe">${percentile.toFixed(2)}</span>
   `;
 }
