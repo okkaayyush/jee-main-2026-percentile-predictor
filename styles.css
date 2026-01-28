@@ -135,7 +135,12 @@ button:hover {
   font-weight: bold;
   text-align: center;
 }
-
+#rank {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
 /* ------------------ */
 /* MOBILE BREAKPOINT */
 /* ------------------ */
