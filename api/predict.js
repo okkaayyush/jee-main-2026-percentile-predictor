@@ -49,8 +49,8 @@ const shiftM99 = {
   "23S2": 152,
   "24S1": 174,
   "24S2": 158,
-  "28S1": 180,
-  "28S2": 185
+  "28S1": 185,
+  "28S2": 188
 };
 
 function difficultyFactor(M99) {
